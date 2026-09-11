@@ -76,7 +76,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end gap-5 max-md:gap-1">
         <a className="btn rounded-full max-md:btn-xs">Sign In</a>
-        <a className="btn rounded-full max-md:btn-xs">Sign Up</a>
+        <a className="btn rounded-full max-md:btn-xs bg-(--primary-color) text-white">Sign Up</a>
       </div>
     </div>
   );

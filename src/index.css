@@ -1,2 +1,30 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* index.css */
+
+:root {
+  --primary-color: #d91b7e;
+  --secondary-background: linear-gradient(90deg, #f97316 0%, #ec4899 100%);
+  --text-color: linear-gradient(
+    90deg,
+    rgba(255, 87, 34, 1) 0%,
+    rgba(216, 27, 126, 1) 50%,
+    rgba(124, 58, 237, 1) 100%
+  );
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.gradient {
+  background: var(--secondary-background);
+}
+
+
+.text-gradient {
+  background: var(--text-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

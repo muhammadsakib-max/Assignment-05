@@ -6,8 +6,8 @@ const Hero = () => {
       <div className="hero-content  flex-col lg:flex-row lg:gap-22 ">
         <div className="max-md:text-center">
           <h1 className="text-6xl max-md:text-3xl font-bold">
-            Build Your Ideal
-            <span> Development Stack</span>
+            Build Your Ideal <br />
+            <span className="text-gradient"> Development Stack</span>
           </h1>
           <p className="py-6">
             Explore frontend, backend, database, and tooling options, compare
@@ -15,7 +15,9 @@ const Hero = () => {
             project.
           </p>
           <div className="flex gap-3 max-md:justify-center ">
-            <button className="btn btn-active btn-secondary">Explore Technologies</button>
+         <button className="btn gradient border-none text-white">
+  Explore Technologies
+</button>
           <button className="btn btn-outline">Learn More</button>
           </div>
         </div>
@@ -25,6 +27,7 @@ const Hero = () => {
           className=""
         />
       </div>
+      
     </div>
   );
 };
