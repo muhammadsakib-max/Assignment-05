@@ -2,7 +2,7 @@ import Logo from "../assets/logo-text.png";
 
 const Navbar = () => {
   return (
-    <div className="navbar justify-between bg-base-100 shadow-sm lg:px-32">
+    <div  className="navbar justify-between z-99 bg-white shadow-sm lg:px-32 fixed">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,7 +28,7 @@ const Navbar = () => {
             className="menu menu-lg dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Home</a>
+              <a href="#home">Home</a>
             </li>
             <li>
               <a>Technologies</a>
@@ -76,7 +76,9 @@ const Navbar = () => {
       </div>
       <div className="navbar-end gap-5 max-md:gap-1">
         <a className="btn rounded-full max-md:btn-xs">Sign In</a>
-        <a className="btn rounded-full max-md:btn-xs bg-(--primary-color) text-white">Sign Up</a>
+        <a className="btn rounded-full max-md:btn-xs bg-(--primary-color) text-white">
+          Sign Up
+        </a>
       </div>
     </div>
   );
