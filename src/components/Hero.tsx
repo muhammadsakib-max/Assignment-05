@@ -1,0 +1,32 @@
+import Banner from "../assets/banner-stack.png";
+
+const Hero = () => {
+  return (
+    <div className="hero bg-base-200 min-h-screen  max-md:items-start max-md:pt-5">
+      <div className="hero-content  flex-col lg:flex-row lg:gap-22 ">
+        <div className="max-md:text-center">
+          <h1 className="text-6xl max-md:text-3xl font-bold">
+            Build Your Ideal
+            <span> Development Stack</span>
+          </h1>
+          <p className="py-6">
+            Explore frontend, backend, database, and tooling options, compare
+            them side by side, and put together the stack that fits your next
+            project.
+          </p>
+          <div className="flex gap-3 max-md:justify-center ">
+            <button className="btn btn-active btn-secondary">Explore Technologies</button>
+          <button className="btn btn-outline">Learn More</button>
+          </div>
+        </div>
+        <img
+          alt="Tailwind CSS hero component"
+          src={Banner}
+          className=""
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
