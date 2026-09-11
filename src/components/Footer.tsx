@@ -1,10 +1,11 @@
 import Logo from '../assets/logo-text.png'
 const Footer = () => {
   return (
-    <><footer className="footer sm:footer-horizontal bg-base-200  border-t border-gray-300 text-base-content p-10 ">
+    <div className="footer-container">
+      <footer className="footer sm:footer-horizontal bg-base-200  border-t border-gray-300 text-base-content py-10 lg:px-32">
   <aside>
     <img src={Logo} alt="Logo" />
-    <p>
+    <p className="max-w-md py-2">
       Curated tools, technologies, and resources for developers building
 
       <br />
@@ -36,7 +37,7 @@ const Footer = () => {
 </footer>
 
 
-<footer className="footer sm:footer-horizontal border-t border-gray-300 bg-base-200 p-4 max-sm:place-items-center max-sm:text-center">
+<footer className="footer sm:footer-horizontal border-t  border-gray-300 bg-base-200 py-4 max-sm:place-items-center max-sm:text-center lg:px-32">
   <aside className="grid-flow-col items-center">
     <p>© {new Date().getFullYear()} - Dev Stack. All rights reserved.</p>
   </aside>
@@ -45,7 +46,7 @@ const Footer = () => {
     <a className="link link-hover">Terms</a>
   </nav>
 </footer>
-</>
+</div>
   )
 }
 
