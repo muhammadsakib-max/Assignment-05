@@ -28,7 +28,7 @@ const Navbar = () => {
             className="menu menu-lg dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a href="#home">Home</a>
+              <a>Home</a>
             </li>
             <li>
               <a>Technologies</a>
@@ -55,9 +55,9 @@ const Navbar = () => {
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Home</a>
+        <ul className="menu menu-horizontal px-1  gap-3 ">
+          <li >
+            <a className="text-(--primary-color)">Home</a>
           </li>
           <li>
             <a>Technologies</a>
@@ -74,9 +74,9 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end gap-5 max-md:gap-1">
-        <a className="btn rounded-full max-md:btn-xs">Sign In</a>
-        <a className="btn rounded-full max-md:btn-xs bg-(--primary-color) text-white">
+      <div className="navbar-end gap-5 max-md:gap-4">
+        <a className="font-medium max-md:text-xs">Sign In</a>
+        <a className="btn rounded-full max-md:btn-xs bg-(--primary-color) text-white ml-2 lg:px-6 lg:py-5 max-sm:px-3 max-sm:py-4 max-md:px-4 max-md:py-3 ">
           Sign Up
         </a>
       </div>

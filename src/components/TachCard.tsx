@@ -1,25 +1,39 @@
-import { useState, type Dispatch, type SetStateAction } from "react";
+// import Dispatch and SetStateAction types , TechnologiesDataType type, and toast
+import { type Dispatch, type SetStateAction } from "react";
 import type { TechnologiesDataType } from "../types";
 import { toast } from "react-toastify";
+
+// Define the interface for the TachCard component props
 export interface TachCardProps {
   tech: TechnologiesDataType;
   selectedTechs: TechnologiesDataType[];
   setSelectedTechs: Dispatch<SetStateAction<TechnologiesDataType[]>>;
 }
 
+// Define the TachCard component + receive tech, selectedTechs, and setSelectedTechs as props
 const TachCard = ({ tech, selectedTechs, setSelectedTechs }: TachCardProps) => {
-  // const [isDisabled, setIsDisabled] = useState(false);
+
+  // Check if the current technology is already selected, for disabling the "Add to Stack" button if it is
   const isSelected = selectedTechs.some((t) => t.id === tech.id);
+
+
+  // Function to handle adding a technology to the selected stack
   const handleAddToStack = (t: string) => {
-    // setIsDisabled(true);
+
+    // Store the selected technology data
     setSelectedTechs([...selectedTechs, tech]);
 
+    // Show a toast notification indicating that the technology has been added to the stack
     const notify = () => toast(`${t} is Added to stack successfully!`);
     notify();
+
   };
-  console.log(selectedTechs);
+
+
   return (
     <div className="card w-full max-w-md bg-base-100 border border-base-300 shadow-sm ">
+
+      {/* Technology Icon and Badge */}
       <div className="card-body p-6">
         <div className="flex items-start justify-between">
           <img src={tech.icon} alt={tech.name} className="size-12" />
@@ -28,11 +42,13 @@ const TachCard = ({ tech, selectedTechs, setSelectedTechs }: TachCardProps) => {
           </span>
         </div>
 
+        {/* Technology Name and Description */}
         <h2 className="card-title text-2xl font-bold mt-4">{tech.name}</h2>
         <p className="text-base-content/60 leading-relaxed">
           {tech.description}
         </p>
 
+        {/* Technology Category, Difficulty, and Rating */}
         <div className="flex items-center justify-between border-t border-base-200  py-2 text-sm">
           <span className="badge badge-ghost text-sm rounded-md">
             {tech.category}
@@ -44,6 +60,7 @@ const TachCard = ({ tech, selectedTechs, setSelectedTechs }: TachCardProps) => {
           </span>
         </div>
 
+        {/* Add to Stack Button + handler */}
         <button
           onClick={() => handleAddToStack(tech.name)}
           disabled={isSelected}
@@ -51,6 +68,7 @@ const TachCard = ({ tech, selectedTechs, setSelectedTechs }: TachCardProps) => {
         >
           Add to Stack
         </button>
+
       </div>
     </div>
   );

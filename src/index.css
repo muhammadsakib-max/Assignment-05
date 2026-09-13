@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* index.css */
 
 :root {
   --primary-color: #d91b7e;
@@ -21,7 +20,6 @@
 .gradient {
   background: var(--secondary-background);
 }
-
 
 .text-gradient {
   background: var(--text-color);
