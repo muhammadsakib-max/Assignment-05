@@ -3,7 +3,7 @@ import Logo from "../assets/logo-text.png";
 const Navbar = () => {
   return (
     <div  className="navbar justify-between z-99 bg-white shadow-sm lg:px-32 fixed">
-      <div className="navbar-start">
+      <div className="navbar-start ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -74,8 +74,8 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end gap-5 max-md:gap-4">
-        <a className="font-medium max-md:text-xs">Sign In</a>
+      <div className="navbar-end gap-4 max-md:gap-1">
+        <a className="btn btn-ghost rounded-full font-medium max-md:btn-xs ml-2 lg:px-6 lg:py-5 max-sm:px-3 max-sm:py-4 max-md:px-4 max-md:py-3">Sign In</a>
         <a className="btn rounded-full max-md:btn-xs bg-(--primary-color) text-white ml-2 lg:px-6 lg:py-5 max-sm:px-3 max-sm:py-4 max-md:px-4 max-md:py-3 ">
           Sign Up
         </a>

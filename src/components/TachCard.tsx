@@ -54,7 +54,7 @@ const getBadgeStyle = (badge: string) => badgeStyles[badge] ?? 'badge-ghost'
       <div className="card-body p-6">
         <div className="flex items-start justify-between">
           <img src={tech.icon} alt={tech.name} className="size-12" />
-          <span className={`badge badge-soft badge-info badge-lg font-medium ${getBadgeStyle(tech.badge)}`}>
+          <span className={`badge badge-soft badge-lg font-medium ${getBadgeStyle(tech.badge)}`}>
             {tech.badge}
           </span>
         </div>
