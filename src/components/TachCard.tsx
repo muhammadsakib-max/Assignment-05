@@ -29,6 +29,23 @@ const TachCard = ({ tech, selectedTechs, setSelectedTechs }: TachCardProps) => {
 
   };
 
+  // Define a mapping of badge types to their corresponding styles
+  const badgeStyles: Record<string, string> = {
+  Popular: 'badge-primary',
+  Versatile: 'badge-success',
+  Fast: 'badge-warning',
+  'Full-Stack': 'badge-secondary',
+  Standard: 'badge-info',
+  'Top SQL': 'badge-primary',
+  Cache: 'badge-error',
+  Ubiquitous: 'badge-warning',
+  Essential: 'badge-accent',
+  Robust: 'badge-neutral',
+  Modern: 'badge-success',
+  Containers: 'badge-info',
+}
+
+const getBadgeStyle = (badge: string) => badgeStyles[badge] ?? 'badge-ghost'
 
   return (
     <div className="card w-full max-w-md bg-base-100 border border-base-300 shadow-sm ">
@@ -37,7 +54,7 @@ const TachCard = ({ tech, selectedTechs, setSelectedTechs }: TachCardProps) => {
       <div className="card-body p-6">
         <div className="flex items-start justify-between">
           <img src={tech.icon} alt={tech.name} className="size-12" />
-          <span className="badge badge-soft badge-info badge-lg font-medium">
+          <span className={`badge badge-soft badge-info badge-lg font-medium ${getBadgeStyle(tech.badge)}`}>
             {tech.badge}
           </span>
         </div>
